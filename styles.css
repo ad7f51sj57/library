@@ -1,0 +1,120 @@
+@import "./reset.css";
+
+:root {
+  --brown: rgb(61, 53, 51);
+  --beige-gray: rgb(231, 226, 226);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 2.6em 0;
+}
+
+header,
+main {
+  width: calc(100% - 20%);
+  margin: auto;
+  color: var(--brown);
+}
+
+header {
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+button {
+  border: none;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8em;
+}
+label {
+  font-size: 1.2rem;
+}
+input {
+  width: calc(100% - 1.6em);
+  height: 2.5em;
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 8px;
+  outline: none;
+  padding: 0 0.8em;
+  background-color: var(--beige-gray);
+}
+input:focus {
+  outline: 1.8px solid rgb(196, 187, 187);
+}
+
+.submit-btn {
+  font-size: 1.2rem;
+  background-color: rgb(139, 139, 139);
+  color: white;
+  padding: 0.8em;
+  border-radius: 8px;
+  margin-top: 0.5em;
+}
+.active {
+  background-color: var(--brown);
+}
+
+.books-container {
+  color: var(--brown);
+  font-size: 1.08rem;
+}
+.books-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: bold;
+  padding: 2em 0 1em;
+  border-bottom: 2px solid var(--beige-gray);
+}
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-self: center;
+  padding: 0.6em;
+  border-bottom: 2px solid var(--beige-gray);
+}
+.book-item {
+  align-self: center;
+}
+.remove-btn {
+  width: 1.2em;
+  background-color: transparent;
+}
+
+.notification {
+  margin-bottom: 0.5em;
+}
+.err {
+  color: rgb(180, 50, 50);
+  background-color: #fce4ec;
+  padding: 0.8em;
+  border-radius: 8px;
+}
+.success {
+  color: rgb(16, 145, 85);
+  background-color: rgb(228, 252, 241);
+  padding: 0.8em;
+  border-radius: 8px;
+}
+.fade-out {
+  animation: fadeOut 1s ease-out;
+}
+@keyframes fadeOut {
+  form {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
